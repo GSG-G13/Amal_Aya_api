@@ -81,6 +81,7 @@ body{
     width: 362px;
     height: 436px;
     position: relative;
+    transition: 3s;
    
 }
 
@@ -123,15 +124,20 @@ body{
     right: -100%;
     position: absolute;
     background: #1f3d4738;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     padding: 7rem 1rem;
     text-align: center;
+    text-align: left;
     
+    }
+    .card-details h2{
+        margin-bottom: 5px;
     }
     .powers{
         list-style: none;
-        position: absolute;
-        bottom: 90px ;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 11px;
         display: flex;
        
         
@@ -143,7 +149,7 @@ body{
        border-radius: 8px;
       font-size: 13px;
     }
-    .powers span{
+    .powers span:last-child{
         color: #ff0000;
     }
     .group{

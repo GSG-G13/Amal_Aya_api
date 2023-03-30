@@ -27,26 +27,30 @@ const createCard = (data) => {
     const icon = document.createElement('i');
     icon.classList = 'fa-solid fa-shield-halved';
 
-    li.textContent = 'INTELLIGENC ';
+
     const span = document.createElement('span');
     span.textContent = data[i].powerstats.intelligence;
-    li.append(icon, span);
+    const intelligence = document.createElement('span');
+    intelligence.textContent = 'INTELLIGENC';
+    li.append(icon, intelligence, span);
     const li2 = document.createElement('li');
     const icon2 = document.createElement('i');
     icon2.classList = 'fa-solid fa-shield-halved';
-    li2.textContent = 'STRENGTH ';
+    const strength = document.createElement('span');
+    strength.textContent = 'STRENGTH';
     const span2 = document.createElement('span');
     span2.textContent = data[i].powerstats.strength;
-    li2.append(icon2, span2);
+    li2.append(icon2, strength, span2);
     const li3 = document.createElement('li');
     const icon3 = document.createElement('i');
     icon3.classList = 'fa-solid fa-shield-halved';
-    li3.textContent = 'COMBACT ';
+    const combact = document.createElement('span');
+    combact.textContent = 'COMBACT ';
     const span3 = document.createElement('span');
     span3.textContent = data[i].powerstats.combat;
-    li3.append(icon3, span3);
+    li3.append(icon3, combact, span3);
     ul.append(li, li2, li3);
-    cardDetails.append(h2, p, ul);
+    cardDetails.append(h2, p);
     const div2 = document.createElement('div');
 
     div2.classList.add('card-body');
@@ -55,7 +59,7 @@ const createCard = (data) => {
     h5.textContent = data[i].name;
     const publisher = document.createElement('h5');
     publisher.textContent = data[i].biography.publisher;
-    div2.append(h5, publisher);
+    div2.append(h5, publisher, ul);
     div.append(img, div2, cardDetails);
     container.append(div);
   }
