@@ -1,6 +1,6 @@
 const app = require('./app');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 2000;
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
