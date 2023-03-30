@@ -1,6 +1,6 @@
 const searchInput = document.querySelector('.search-hero');
 
-searchInput.addEventListener('keyup', () => {
+searchInput.addEventListener('input', () => {
   const { value } = searchInput;
   fetch(`/search/${value}`)
     .then((res) => res.json())

@@ -14,4 +14,7 @@ const searchName = (req, res) => {
     .then((data) => res.send(data.results));
 };
 
-module.exports = { handleHomePage, searchName };
+const errorr = (req, res) => {
+  res.sendFile(path.join(__dirname,'../../public/500.html'))
+}
+module.exports = { handleHomePage, searchName, errorr };
